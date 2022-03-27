@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Crédito Happy Eart</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="css/home.css" rel="stylesheet" type="text/css" />
+    <link href="css/forms.css" rel="stylesheet" type="text/css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="scr/credito.js"></script>
+
+</head>
+<body>
+    <div id="container">
+        <header id="header">
+            <nav class="menu">
+                <ul>
+                    <li class="btn_1"><a href="index.html">Home</a></li>
+                    <li class="btn_2"><a href="weather.html">Tiempo</a></li>
+                    <li class="btn_3"><a href="credito.html">Crédito</a></li>
+                    <li class="btn_4"><a href="#">Servicios</a></li>
+                    <li class="btn_5"><a href="contacto.html">Contáctenos</a></li>                </ul>
+            </nav>
+            <img src="images/logo.jpg" alt="" name="logo" width="251" height="45" id="logo" />
+        </header>
+
+        <div id="main">
+            <form class="contact_form" action="#" id="contact_form" method="post">
+                <div>
+                    <ul>
+
+                        <li>
+                            <h2>Crédito</h2>
+                            <span class="required_notification">* Datos requeridos</span>
+                        </li>
+
+                        <li>
+                            <label for="email">Email:</label>
+                            <input type="email" name="email" placeholder="info@developerji.com" required=required />
+                            <span class="form_hint">Formato correcto: "name@something.com"</span>
+                        </li>
+
+                        <li>
+                            <label for="name">Nombre:</label>
+                            <input type="text" placeholder="John Doe" required=required  id="n"/>
+                        </li>
+
+                        <li>
+                            <label for="date">Fecha de nacimiento:</label>
+                            <input type="date" placeholder="MM/DD/YYYY" required=required id="fechaN" />
+                        </li>
+
+                        <li>
+                            <label for="salary">Salario neto mensual:</label>
+                            <input type="number" value="0.00" min="0" step="0.01" data-number-to-fixed="2" data-number-stepfactor="100" class="currency" id="snm" required=required />
+
+                        </li>
+
+                        <li>
+                            <label for="annual interest rate">Tasa de interés anual:</label>
+                            <span class="input-group-addon">%</span>
+                            <input type="number" value="7.10" min="0" step="0.01" data-number-to-fixed="2" data-number-stepfactor="100" class="currency" id="tm" required=required />
+
+                        </li>
+
+                        <li>
+                            <label for="term in years">Plazo en años:</label>
+                            <input type="range" min="1" max="100" oninput="this.nextElementSibling.value = this.value" id="p" />
+                            <output></output>
+
+                        </li>
+
+                        <li>
+                            <label for="home value">Valor de la vivienda:</label>
+                            <input type="number" value="0.00" min="0" step="0.01" data-number-to-fixed="2" data-number-stepfactor="100" class="currency" id="valorV" required=required />
+
+                        </li>
+
+                        <li>
+                            <label for="amount to request">Monto a solicitar:</label>
+                            <input type="number" value="0.00" min="0" step="0.01" data-number-to-fixed="2" data-number-stepfactor="100" class="currency" id="ms" required=required />
+
+                        </li>
+
+                        <li>
+                            <button class="" type="button" onclick="calcular()">Calcular</button>
+                           
+                           
+
+                        </li>
+                       
+                        <li>
+                            <label for="monthly payment">Pago mensual:</label>
+                            <input type="text" id="pagoMensual" value="" readonly />
+                        </li>
+                       
+                        <li>
+                            <label for="required minimum wage">Salario mínimo requerido:</label>
+                            <input type="text" id="salarioMinimoRequerido" value="" readonly/>
+                            <br />
+                           
+                        </li>
+
+                        <li>
+                            <label for="percentage to finance">% a financiar:</label>
+                            <p id="percentageToFinance"></p>
+                        </li>
+
+                        <li>
+                            <p id="montoSalarioSuficienteCredito"></p>
+                            <p id="autorizarEdad"></p>
+                        </li>
+
+                        <li>
+                            <button type="button">Mostrar Proyección</button>
+                        </li>
+
+                    </ul>
+                   
+                </div>
+            </form>
+        </div>
+
+        <footer id="footer">
+            <p>
+                <a href="index.html">Home</a> | <a href="weather.html">Tiempo</a> | <a href="credito.html">Crédito</a> | <a href="#">Servicios</a> | <a href="contacto.html">Contáctenos</a><br />
+                Copyright &copy; Real State Happy Eart
+            </p>
+        </footer>
+    </div>
+
+</body>
+</html>
